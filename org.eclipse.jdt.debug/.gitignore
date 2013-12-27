@@ -1,1 +1,4 @@
 /jdi-bin/
+/target
+/jdimodel.jar
+/jdi.jar
