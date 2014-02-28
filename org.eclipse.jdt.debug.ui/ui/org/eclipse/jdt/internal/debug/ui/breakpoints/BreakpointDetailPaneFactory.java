@@ -40,7 +40,7 @@ public class BreakpointDetailPaneFactory implements IDetailPaneFactory {
 	/* (non-Javadoc)
 	 * @see org.eclipse.debug.ui.IDetailPaneFactory#getDetailPaneTypes(org.eclipse.jface.viewers.IStructuredSelection)
 	 */
-	public Set getDetailPaneTypes(IStructuredSelection selection) {
+	public Set<String> getDetailPaneTypes(IStructuredSelection selection) {
 		HashSet<String> set = new HashSet<String>();
 		if (selection.size() == 1) {
 			IBreakpoint b = (IBreakpoint) selection.getFirstElement();

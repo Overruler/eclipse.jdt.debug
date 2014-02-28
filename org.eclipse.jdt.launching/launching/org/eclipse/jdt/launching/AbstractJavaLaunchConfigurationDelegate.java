@@ -555,14 +555,15 @@ public abstract class AbstractJavaLaunchConfigurationDelegate extends LaunchConf
 	 *                if unable to retrieve the attribute
 	 */
 	public Map<String, Object> getVMSpecificAttributesMap(ILaunchConfiguration configuration) throws CoreException {
-		Map<String, Object> map = configuration.getAttribute(IJavaLaunchConfigurationConstants.ATTR_VM_INSTALL_TYPE_SPECIFIC_ATTRS_MAP,(Map<String, Object>) null);
+		Map<String, String> map2 = configuration.getAttribute(IJavaLaunchConfigurationConstants.ATTR_VM_INSTALL_TYPE_SPECIFIC_ATTRS_MAP,(Map<String, String>) null);
 		String[][] paths = getBootpathExt(configuration);
 		String[] pre = paths[0];
 		String[] boot = paths[1];
 		String[] app = paths[2];
+		HashMap<String, Object> map = new HashMap<String, Object>(3);
 		if (pre != null || app != null || boot != null) {
-			if (map == null) {
-				map = new HashMap<String, Object>(3);
+			if (map2 != null) {
+				map.putAll(map2);
 			}
 			if (pre != null) {
 				map.put(IJavaLaunchConfigurationConstants.ATTR_BOOTPATH_PREPEND, pre);
