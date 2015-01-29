@@ -2727,16 +2727,19 @@ M4 = Platform-specific fourth key
             commandId="org.eclipse.jdt.debug.ui.commands.StepIntoSelection"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
       <key
-            sequence="M2+M3+F"
+            sequence="M1+F9"
+            contextId="org.eclipse.debug.ui.debugging"
             commandId="org.eclipse.jdt.debug.ui.commands.ForceReturn"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>            
       <key
             platform="carbon"
-            sequence="M2+M3+F"
+            sequence="M1+F9"
+            contextId="org.eclipse.debug.ui.debugging"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>            
       <key
             platform="carbon"
             sequence="M1+M3+F"
+            contextId="org.eclipse.debug.ui.debugging"
             commandId="org.eclipse.jdt.debug.ui.commands.ForceReturn"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>            
 	  <key
